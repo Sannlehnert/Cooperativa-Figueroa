@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,234 +10,121 @@
   }
   
   body {
-    @apply font-sans text-gray-800 bg-white;
+    @apply font-sans text-gray-800 bg-background;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display tracking-tight;
   }
 }
 
 @layer components {
-  /* Botones con la nueva paleta patagónica */
+  /* Botones nueva paleta */
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-700 to-blue-900 text-white font-bold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105;
+    @apply bg-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 border border-primary/20;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-emerald-700 to-emerald-900 text-white font-bold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105;
+    @apply bg-secondary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-secondary/25 transition-all duration-300 hover:scale-105 border border-secondary/20;
   }
   
   .btn-accent {
-    @apply bg-gradient-to-r from-amber-600 to-amber-800 text-white font-bold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-amber-500/25 transition-all duration-300 hover:scale-105;
+    @apply bg-accent hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-full hover:shadow-xl hover:shadow-accent/25 transition-all duration-300 hover:scale-105 border border-accent/20;
   }
   
-  .btn-aurora {
-    @apply bg-gradient-to-r from-blue-700 via-emerald-700 to-amber-600 text-white font-bold py-3 px-6 rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105;
+  .btn-main {
+    @apply bg-gradient-to-r from-primary via-primary/90 to-accent text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105;
     background-size: 200% auto;
   }
   
-  .btn-aurora:hover {
+  .btn-main:hover {
     background-position: right center;
   }
   
-  /* Secciones */
   .section-padding {
     @apply py-12 md:py-20 px-4 md:px-8;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100;
   }
   
-  /* Hover effects */
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-1;
-  }
-  
-  /* Glass effect */
-  .glass {
-    @apply bg-white/10 backdrop-blur-sm border border-white/20;
   }
 }
 
 @layer utilities {
-  /* Gradientes de texto con colores directos */
-  .text-gradient-neuquino {
-    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #3B82F6 100%);
+  .text-gradient-main {
+    background: linear-gradient(135deg, #2D6A4F 0%, #52B788 50%, #2D6A4F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .text-gradient-andino {
-    background: linear-gradient(135deg, #047857 0%, #059669 50%, #10B981 100%);
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #343A40 0%, #52B788 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .text-gradient-aurora {
-    background: linear-gradient(-45deg, #1E3A8A, #047857, #D97706, #3B82F6, #10B981);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: aurora 8s ease infinite;
-  }
-  
-  /* Aurora effect */
-  .bg-aurora {
-    background: linear-gradient(-45deg, #1E3A8A, #047857, #D97706, #3B82F6, #10B981);
-    background-size: 400% 400%;
-    animation: aurora 15s ease infinite;
-  }
-  
-  /* Patrones de fondo */
-  .bg-dots {
-    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 0);
-    background-size: 40px 40px;
-  }
-  
-  /* Border gradients */
-  .border-gradient-neuquino {
+  .border-gradient-main {
     border: 2px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #1E3A8A, #2563EB) border-box;
+    background: linear-gradient(#F8F9FA, #F8F9FA) padding-box,
+                linear-gradient(135deg, #2D6A4F, #52B788) border-box;
   }
   
-  .border-gradient-andino {
-    border: 2px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #047857, #10B981) border-box;
-  }
-  
-  /* Custom shadows */
-  .shadow-patagonia {
-    box-shadow: 0 10px 30px -5px rgba(30, 58, 138, 0.3), 
-                0 10px 20px -10px rgba(4, 120, 87, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  
-  .shadow-andino {
-    box-shadow: 0 10px 30px -5px rgba(4, 120, 87, 0.3), 
-                0 10px 20px -10px rgba(217, 119, 6, 0.2);
-  }
-  
-  /* Focus styles - CORREGIDO */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background;
   }
   
-  /* Loading skeleton */
-  .skeleton {
-    @apply bg-gray-200 animate-pulse rounded;
-  }
-  
-  /* Line clamp utilities */
-  .line-clamp-1 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
-  
-  .line-clamp-2 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-  }
-  
-  .line-clamp-3 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out;
   }
 }
 
-/* Animations */
-@keyframes aurora {
-  0%, 100% { 
-    background-position: 0% 50%;
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
   }
-  50% { 
-    background-position: 100% 50%;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0); 
-  }
-  50% { 
-    transform: translateY(-20px); 
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
+.animate-blob { animation: blob 7s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F8F9FA; border-radius: 5px; }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(to bottom, #2D6A4F, #52B788);
+  border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: linear-gradient(to bottom, #255945, #47A67A); 
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #1E3A8A, #047857, #D97706);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #1D4ED8, #059669, #B45309);
-}
-
-/* Selection styles */
 ::selection {
-  background-color: rgba(30, 58, 138, 0.3);
-  color: #1E3A8A;
+  background-color: rgba(45, 106, 79, 0.3);
+  color: #2D6A4F;
 }
 
-::-moz-selection {
-  background-color: rgba(30, 58, 138, 0.3);
-  color: #1E3A8A;
-}
-
-/* Smooth transitions */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}

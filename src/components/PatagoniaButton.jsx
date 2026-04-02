@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 
 const PatagoniaButton = ({ 
   to, 
@@ -19,7 +19,9 @@ const PatagoniaButton = ({
   };
   
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-primary-600 to-primary-800 text-white hover:shadow-xl hover:shadow-primary/25',
+primary: 'btn-primary',
+
+
     secondary: 'bg-gradient-to-r from-secondary-600 to-secondary-800 text-white hover:shadow-xl hover:shadow-secondary/25',
     accent: 'bg-gradient-to-r from-accent-600 to-accent-800 text-white hover:shadow-xl hover:shadow-accent/25',
     aurora: 'btn-aurora',
@@ -30,7 +32,7 @@ const PatagoniaButton = ({
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
   
   return (
-    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+<div className="group hover:scale-105 transition-transform active:scale-95">
       {to ? (
         <Link to={to} className={classes} {...props}>
           {children}
@@ -40,8 +42,9 @@ const PatagoniaButton = ({
           {children}
         </button>
       )}
-    </motion.div>
+    </div>
   );
 };
+
 
 export default PatagoniaButton;

@@ -7,14 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Mantenemos estos colores personalizados simples
-        primary: '#1E3A8A',
-        secondary: '#047857', 
-        accent: '#D97706',
+        primary: '#2D6A4F',      // Verde bosque institucional
+        secondary: '#343A40',    // Gris oscuro industrial  
+        accent: '#52B788',       // Verde claro brillante
+        background: '#F8F9FA',   // Fondo claro limpio
       },
       fontFamily: {
-        sans: ['"Manrope"', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        // Títulos: Montserrat (sólida, corporativa)
+        display: ['Montserrat', '"Playfair Display"', 'Georgia', 'serif'],
+        // Body: Inter (legible, moderna)
+        sans: ['Inter', 'Roboto', 'system-ui', 'sans-serif'],
       },
       animation: {
         'blob': 'blob 7s infinite',
@@ -26,21 +28,14 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         blob: {
-          '0%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
-          '33%': {
-            transform: 'translate(30px, -50px) scale(1.1)',
-          },
-          '66%': {
-            transform: 'translate(-20px, 20px) scale(0.9)',
-          },
-          '100%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
         }
       }
     },
   },
   plugins: [],
 }
+
