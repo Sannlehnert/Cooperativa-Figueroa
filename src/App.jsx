@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Proposal from './pages/Proposal';
+import About from './pages/About';
 import HowWeWork from './pages/HowWeWork';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
@@ -20,6 +21,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/nosotros" element={<About />} />
             <Route path="/servicios" element={<Services />} />
             <Route path="/propuesta" element={<Proposal />} />
             <Route path="/como-trabajamos" element={<HowWeWork />} />
