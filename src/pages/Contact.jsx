@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       title: 'Oficina Central',
-      details: ['Av. Siempre Viva 1234', 'Buenos Aires, Argentina'],
+      details: ['Avenida Del Trabajador 1234', 'Neuquen, Argentina'],
       color: 'text-purple-600'
     },
     {
@@ -116,49 +116,22 @@ const Contact = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
               <h3 className="text-xl font-semibold mb-4">Áreas de Trabajo</h3>
               <p className="text-gray-600 mb-4">
-                Actualmente brindamos servicios en las siguientes zonas:
+                Trabajamos en:
               </p>
-              <ul className="grid grid-cols-2 gap-3 text-gray-700">
+              <ul className="space-y-2 text-gray-700">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  Capital Federal
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                  Neuquén
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  GBA Norte
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                  Plottier
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  GBA Sur
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  GBA Oeste
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  La Plata
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                  Zárate
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                  Cipolletti
                 </li>
               </ul>
-              <p className="text-gray-600 mt-4">
-                ¿No estás en la lista? Contáctanos igual, podemos evaluar tu zona.
-              </p>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-8 text-center">
-              <FaMapMarkerAlt className="text-4xl text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Mapa de Cobertura</h3>
-              <p className="text-gray-600 mb-4">
-                Aquí se mostraría un mapa interactivo con las zonas de cobertura
-              </p>
-              <div className="h-48 bg-gray-300 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Mapa interactivo</p>
-              </div>
             </div>
 
             {/* Emergency Banner */}

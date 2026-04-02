@@ -83,9 +83,9 @@ const Services = () => {
               {/* Header */}
               <div id={category.title.toLowerCase().replace(/ /g, '-').replace(/ñ/g, 'n')} className={`bg-gradient-to-r ${category.color} text-white p-8 lg:p-12 scroll-mt-20`}>
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between">
-                  <div className="flex items-center space-x-4 mb-6 lg:mb-0">
-                      <div className="flex items-center justify-center">
-                        <img src={category.image} alt={category.title} className="h-14 w-auto max-h-14 drop-shadow-lg" />
+                  <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 w-full lg:w-auto">
+                      <div className="flex items-center justify-center min-w-[120px]">
+                        <img src={category.image} alt={category.title} className="h-16 w-[120px] lg:h-20 lg:w-[140px] object-contain drop-shadow-xl" />
                       </div>
                     <div>
                       <h2 className="text-3xl font-bold">{category.title}</h2>
